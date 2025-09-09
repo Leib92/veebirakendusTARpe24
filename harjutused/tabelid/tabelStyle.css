@@ -1,0 +1,79 @@
+/* table id = lihtne */
+
+#lihtne{
+    width: 60%;
+    height: 200px;
+    border: 1px black solid;
+    border-collapse: collapse;
+}
+
+#lihtne td{
+    border: 1px black solid;
+    text-align: center;
+}
+
+#lihtne tr:nth-child(1) td:nth-child(1){ /* rida 1, lahter 1 */
+    background-color: red;
+}
+#lihtne tr:nth-child(1) td:nth-child(2){ /* rida 1, lahter 2 */
+    background-color: blue;
+}
+#lihtne tr:nth-child(2) td:nth-child(1){ /* rida 2, lahter 1 */
+    background-color: green;
+}
+#lihtne tr:nth-child(2) td:nth-child(2){ /* rida 2, lahter 2 */
+    background-color: yellow;
+}
+
+#keeruline1{
+    width: 60%;
+    height: 200px;
+    border: 1px black solid;
+    border-collapse: collapse;
+}
+
+#keeruline1 td{
+    border: 1px black solid;
+    text-align: center;
+}
+
+#keeruline2{
+    width: 60%;
+    height: 200px;
+    border: 1px black solid;
+    border-collapse: collapse;
+}
+
+#keeruline2 td{
+    border: 1px black solid;
+    text-align: center;
+}
+
+#chaos{
+    width: 60%;
+    height: 200px;
+    border: 1px black solid;
+    border-collapse: collapse;
+}
+#chaos td{
+    border: 1px black solid;
+    text-align: center;
+}
+#chaos tr:nth-child(2) td:nth-child(2){
+    vertical-align: top;
+}
+#chaos tr:nth-child(2) td:nth-child(3){
+    vertical-align: top;
+}
+
+#spiral{
+    width: 60%;
+    height: 200px;
+    border: 1px black solid;
+    border-collapse: collapse;
+}
+
+#spiral td{
+    border: 1px black solid;
+    text-align: center;
+}
