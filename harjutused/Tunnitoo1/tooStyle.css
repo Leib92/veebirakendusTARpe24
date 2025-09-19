@@ -9,15 +9,6 @@
     text-align: center;
 }
 
-#tabel1 tr:nth-child(2) td:nth-child(1){
-    visibility: hidden;
-    background-color: darkgray;
-}
-#tabel1 tr:nth-child(2) td:nth-child(2){
-    visibility: hidden;
-    background-color: darkgray;
-}
-
 #ruutud{
     list-style-type: square;
     font-family: comic Sans MS, cursive;
