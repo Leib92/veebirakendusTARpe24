@@ -1,12 +1,12 @@
 #tabel1{
-    height: 200px;
-    border: 10px black double;
-    border-collapse: collapse;
+    border: 1px outset grey;
+    padding: 1px;
 }
 
 #tabel1 td{
-    border: 10px black double;
     text-align: center;
+    border: 1px outset grey;
+    padding: 1px;
 }
 
 #ruutud{
