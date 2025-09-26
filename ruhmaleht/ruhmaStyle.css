@@ -1,0 +1,33 @@
+body{
+    background-color: midnightblue;
+    color: whitesmoke;
+    font-family: "Cascadia Mono", monospace;
+}
+a:link {
+    color: whitesmoke;
+    text-decoration: none;
+
+}
+td:hover {
+    background-color: darkgrey;
+
+}
+table{
+    width: 70%;
+    padding: 2px;
+    border: 2px solid whitesmoke;
+}
+td{
+    padding: 1%;
+    border: 2px solid whitesmoke;
+    text-align: center;
+}
+
+/*
+.transt{
+    color: red;
+    transition-property: color;
+    transition-timing-function: ease-in-out;
+    transition-delay: 1000ms;
+}
+*/
