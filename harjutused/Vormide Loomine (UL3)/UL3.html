@@ -2,7 +2,7 @@
 <html lang="et">
 <head>
     <meta charset="UTF-8">
-    <title>Ulesanne 2</title>
+    <title>ülesanne 3</title>
     <link rel="stylesheet" href="vormStyle.css">
     <script src="lugemineScript.js"></script>
 </head>
@@ -39,8 +39,49 @@
     </fieldset>
     <fieldset>
         <legend>Kontakt</legend>
+        <br>
 
+        <label for="ePost">E-post</label>
+        <br>
+        <input type="email" name="ePost" id="ePost" maxlength="100" placeholder="nimi@kool.ee" required>
+        <br><br>
 
+        <label for="telefon">Telefon</label>
+        <br>
+        <input type="tel" name="telefon" id="telefon" pattern="^\+372\s?\d{7,8}$" placeholder="+372 51234567" required>
+        <br><br>
+
+        <label for="aadress">Aadress</label>
+        <br>
+        <textarea name="aadress" id="aadress" cols="30" rows="5" placeholder="Tänav, maja, korter"></textarea>
+        <br><br>
+
+        <label for="linn">Linn / asula</label>
+        <br>
+        <input type="text" name="linn" id="linn" maxlength="30" placeholder="Tallinn" required>
+        <br><br>
+
+        <label for="posti">Telefon</label>
+        <br>
+        <input type="tel" name="posti" id="posti" pattern="^\d{5}$" maxlength="5" placeholder="10111">
+        <br><br>
+
+    </fieldset>
+    <fieldset>
+        <legend>Muu info</legend>
+        <br>
+
+        <legend>Huvialad</legend>
+        <input type="radio" name="huvialad" id="joon" value="Joonistamine">
+        <label for="joon">Joonistamine</label>
+        <input type="radio" name="huvialad" id="laul" value="Laulmine">
+        <label for="laul">Laulmine</label>
+        <input type="radio" name="huvialad" id="tants" value="Tantsimine">
+        <label for="tants">Tantsimine</label>
+        <br><br>
+    </fieldset>
+    <fieldset>
+        <legend>Nõustumine</legend>
     </fieldset>
 </form>
 </body>
