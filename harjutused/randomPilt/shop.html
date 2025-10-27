@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script src="randompiltScript.js"></script>
+    <script src="shopScript.js"></script>
+    <link rel="stylesheet" href="shopStyle.css">
 </head>
 <body onload="juhuslikPilt()">
 <h1>Juhuslik pilt images-kaustast</h1>
@@ -24,15 +25,13 @@
 <br>
 <input type="radio" name="valik" id="v3" value="images/grey.jpg" onchange="piltMyVastus()">
 <label for="v3">grey</label>
-<br>
-<input type="radio" name="valik" id="v4" value="images/lill.jpg" onchange="piltMyVastus()">
-<label for="v4">lill</label>
 <br><br>
 <div id="vastus"></div>
 <br><br>
 
 <h2>Mitu pilti soovid osta?</h2>
 <input type="number" id="tk" min="1" max="100" step="1" value="1" onchange="arvutaPiltHind()">
+<input type="button" id="solution" value="Calculate" onchange="arvutaPiltHind()">
 <label for="tk">Vali kogus</label>
 <br>
 <div id="vastus2"></div>

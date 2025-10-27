@@ -33,9 +33,7 @@ function albaaniaLipp(){
 
         const insignia=new Image();
         insignia.src="https://upload.wikimedia.org/wikipedia/commons/b/b7/Albanian_Eagle.svg";
-        insignia.onload = () => {
-            l.drawImage(insignia, 110,50,110,120);
-        }
+        l.drawImage(insignia, 110,50,110,120);
     }
 }
 

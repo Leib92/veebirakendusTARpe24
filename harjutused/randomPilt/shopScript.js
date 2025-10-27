@@ -3,8 +3,7 @@ function juhuslikPilt() {
         'images/orange.jpg',
         'images/black.jpg',
         'images/white.jpg',
-        'images/grey.jpg',
-        'images/lill.jpg'
+        'images/grey.jpg'
 
     ];
     const randomPilt=document.getElementById('randomPilt');
@@ -41,11 +40,10 @@ function arvuta(kogus, hind){
     // toFixed - ümardab 2 numbri peale koma
     return (kogus*hind).toFixed(2);
 }
-const pilt0Hind=0;
-const pilt1Hind=2;
-const pilt2Hind=5;
-const pilt3Hind=15.5;
-const piltLillHind=100;
+const pilt0Hind=200;
+const pilt1Hind=300;
+const pilt2Hind=400;
+const pilt3Hind=500;
 
 function arvutaPiltHind(){
     let vastus2=document.getElementById('vastus2');
@@ -54,7 +52,6 @@ function arvutaPiltHind(){
     let v1=document.getElementById('v1');
     let v2=document.getElementById('v2');
     let v3=document.getElementById('v3');
-    let v4=document.getElementById('v4');
 
     if(v0.checked){
         vastus2.innerHTML=arvuta(tk.value, pilt0Hind)+" euro";
@@ -67,8 +64,5 @@ function arvutaPiltHind(){
     }
     if(v3.checked){
         vastus2.innerHTML=arvuta(tk.value, pilt3Hind)+" euro";
-    }
-    if(v4.checked){
-        vastus2.innerHTML=arvuta(tk.value, piltLillHind)+" euro";
     }
 }
