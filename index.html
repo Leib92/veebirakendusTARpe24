@@ -11,8 +11,56 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
     <link rel="manifest" href="favicon/site.webmanifest">
     <script src="kuupaev_index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.min.js"
+            integrity="sha256-AlTido85uXPlSyyaZNsjJXeCs07eSv3r43kyCVc8ChI="
+            crossorigin="anonymous"></script>
+    <script>
+        function orange(){
+            $('#kirjeldus, h2').css('color', 'orange');
+        }
+        function black(){
+            $('#kirjeldus, h2').css('color', 'black');
+        }
+        function roheline(){
+            $('#kirjeldus, h2').css('color', 'green');
+        }
+        function koordinaadid(event, ui){
+            let koht=ui.offset;
+            $('#koord').html('x: ' + koht.left+ '||| y:' + koht.top);
+        }
+        function start(){
+            $('#kirjeldus').mouseenter(orange);
+            $('#kirjeldus').mouseleave(black);
+            $('h2').mouseleave(roheline);
+            $('#movement').draggable();
+            $('#movement').bind("drag", koordinaadid); // näitab pilti koordinaadid
+        }
+        $(document).ready(function(){
+            $("#hide").click(function(){
+                $("p").hide();
+            });
+            $("#show").click(function(){
+                $("p").show();
+            });
+        });
+        $(document).ready(function(){
+            $("#flip").click(function(){
+                $("#panel").slideToggle("slow");
+            });
+        });
+
+        $(document).ready(function(){
+            $("#nuke").click(function(){
+                $("#kirjeldus").remove();
+            });
+        });
+    </script>
 </head>
-<body>
+
+<body onload="start()">
 <!--HTML5 semantilised elemendid-->
 <header>
     <h1>Allan veebirakenduste leht</h1>
@@ -41,6 +89,7 @@
         </li>
     </ul>
 </nav>
+
 <main>
     <section>
         <h3>Hariduskäik</h3>
@@ -61,6 +110,49 @@
     <input type="button" value="Minu sünnipäevani" onclick="synnipaev()">
     <div id="paevad"></div>
 </main>
+
+<h2>Facts about HTML</h2>
+<div id="kirjeldus">
+    In web development, index.html is the standard filename for a website's homepage.
+    When users visit a website without specifying a particular page, the server automatically delivers the index.html file, ensuring a consistent and organized entry point for visitors.
+</div>
+<br>
+
+<input type="button" value="Move"
+       onclick="$('div#kirjeldus').animate({left:'500px'}, 1000)">
+<input type="button" value="Return"
+       onclick="$('div#kirjeldus').animate({left:'0px'}, 1000)">
+<input type="button" value="NUCLEAR STRIKE"
+       onclick="$('#nuke').remove(2000)">
+<input type="button" value="Hide"
+       onclick="$('div#kirjeldus, #pilt').hide(2000)">
+<input type="button" value="Show"
+       onclick="$('div#kirjeldus, #pilt').show(2000, alert('Näitan teksti ja pilt!'))">
+<br><br>
+
+<div id="flip">Alternative Default Page Names</div>
+<div id="panel">Web servers often look for specific default page names when a user accesses a directory without specifying a file.
+    While index.html is the most common, other default filenames include: index.htm, default.html and home.html
+</div>
+
+<section>
+    <h3>jQuery section</h3>
+    <p>Lisa oma veebilehele uus sektsioon (section), kus on kirjas lühike juhend kasutajale:
+        selgita, kuhu peab vajutama või mida peab tegema, et jQuery efekt tööle hakkaks.</p>
+</section>
+<section>
+    <h3>What to do?</h3>
+    <p>heya</p>
+</section>
+
+<h3>Would you like to learn HTML?</h3>
+<p id="movement">
+    To learn more about it, recommend geeksforgeeks.
+    <br>
+    (Movable paragraph)
+</p>
+<div id="koord"></div>
+<br><br>
 
 <footer>
     &copy;Allan 2025

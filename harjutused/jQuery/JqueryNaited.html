@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.min.js"
+            integrity="sha256-AlTido85uXPlSyyaZNsjJXeCs07eSv3r43kyCVc8ChI="
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        function orange(){
+            $('#kirjeldus, h2').css('color', 'orange');
+        }
+        function black(){
+            $('#kirjeldus, h2').css('color', 'black');
+        }
+        function roheline(){
+            $('#kirjeldus, h2').css('color', 'green');
+        }
+        function koordinaadid(event, ui){
+            let koht=ui.offset;
+            $('#koord').html('x: ' + koht.left+ '||| y:' + koht.top);
+        }
+        function start(){
+            $('#kirjeldus').mouseenter(orange);
+            $('#kirjeldus').mouseleave(black);
+            $('h2').mouseleave(roheline);
+            $('#pilt').draggable();
+            $('#pilt').bind("drag", koordinaadid); // näitab pilti koordinaadid
+        }
+        $(document).ready(function(){
+            $("#hide").click(function(){
+                $("p").hide();
+            });
+            $("#show").click(function(){
+                $("p").show();
+            });
+        });
+        $(document).ready(function(){
+            $("#flip").click(function(){
+                $("#panel").slideToggle("slow");
+            });
+        });
+    </script>
+</head>
+<body onload="start()">
+<h2>jQuery</h2>
+<div id="kirjeldus">
+    jQuery on JavaScripti teek, mis keskendub JavaScripti ja HTML-i DOM-puu läbimise ja manipuleerimise
+
+</div>
+<br>
+<input type="button" value="paremale"
+       onclick="$('div#kirjeldus').animate({left:'500px'}, 1000)">
+<input type="button" value="vasakule"
+       onclick="$('div#kirjeldus').animate({left:'0px'}, 1000)">
+<input type="button" value="STOPP"
+       onclick="$('div#kirjeldus, #pilt').animate({left:'0px'}, 500)">
+<input type="button" value="peida"
+       onclick="$('div#kirjeldus, #pilt').hide(2000)">
+<input type="button" value="näita"
+       onclick="$('div#kirjeldus, #pilt').show(2000, alert('Näitan teksti ja pilt!'))">
+
+
+<p>
+    jQuery CDN - kooperime slim link http://releases.jquery.com/
+</p>
+<img id="pilt" src="big_cat.png" alt="big cat pic" width="350">
+<div id="koord"></div>
+
+<div id="flip">Click to slide the panel down or up</div>
+<div id="panel">Hello world!</div>
+
+<section id="juhend">
+    <h2>jQuery juhend</h2>
+    <old>
+        <li>Nupude vajutamine ja paremale/vasakule liigutamine
+            <input type="button" value="paremale" onclick="$('div#kirjeldus').animate({left:'500px'}, 1000)">
+            <input type="button" value="vasakule" onclick="$('div#kirjeldus').animate({left:'0px'}, 1000)">
+        </li>
+        <li>Hiir</li>
+        <li>Nupud pnäita/peida
+            <input type="button" value="Peida" onclick="$('div#kirjeldus').hide(2000)">
+            <input type="button" value="Näida" onclick="$('div#kirjeldus').show(2000), alert('Näitan tektsti')">
+        </li>
+        <li>
+            <img src="big_cat.png" alt="big cat pic" width="350">
+            <img src="big_cat.png" alt="big cat pic" width="350">
+        </li>
+        <li>
+            Mida ma lisan?
+        </li>
+    </old>
+</section>
+
+</body>
+</html>
