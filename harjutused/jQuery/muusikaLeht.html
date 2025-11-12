@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous">
+    </script>
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.min.js"
+            integrity="sha256-AlTido85uXPlSyyaZNsjJXeCs07eSv3r43kyCVc8ChI="
+            crossorigin="anonymous">
+    </script>
+    <!-- view-source:https://metshein.com/veebitehnoloogia/jquery/24.html -->
+    <script type="text/javascript">
+        $(function(){
+            $('.viga').hide();
+
+            // Kontrolli, kas vähemalt üks checkbox on valitud
+            $('.muusikavorm').submit(function(event){
+                let valid=true;
+                // checkbox
+                if($('input[name="ansambel"]:checked'
+            ).length === 0)
+                {
+                    valid=false;
+                    $('.viga').show();
+                }
+                else
+                {
+                    $('.viga').hide();
+                }
+
+                // Kui vorm ei ole kehtiv, ära saada seda serverisse
+                if (!valid){
+                    event.preventDefault()
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+<h2>Muusika Küsitlus</h2>
+
+<form class="muusikavorm">
+    <fieldset>
+        <legend>Milliseid muusikuid/ansambleid sa tead?</legend>
+        <input type="checkbox" name="ansambel" id="abba" value="ABBA" onchange="valiAnsambel()">
+        <label for="abba">ABBA</label>
+        <br>
+        <input type="checkbox" name="ansambel" id="beatle" value="The Beatles" onchange="valiAnsambel()">
+        <label for="beatle">The Beatles</label>
+        <br>
+        <input type="checkbox" name="ansambel" id="system" value="System of Down" onchange="valiAnsambel()">
+        <label for="system">System of Down</label>
+        <br>
+        <br>
+        <div class="viga">Vali vähemalt üks</div>
+
+        <button type="submit" class="submit">Saada</button>
+    </fieldset>
+</form>
+<br>
+<br>
+<form>
+    <fieldset>
+        <legend>Sa kuulad muusikat [x] tundi päevas.</legend>
+        <input type="radio" name="kuulad" id="kuulad1" value="1"> 1<br>
+        <input type="radio" name="kuulad" id="kuulad2" value="2">  2<br>
+        <input type="radio" name="kuulad" id="kuulad3" value="3">  3<br>
+        <input type="radio" name="kuulad" id="kuulad4" value="4+">  4+<br>
+    </fieldset>
+</form>
+<br>
+<br>
+
+
+</body>
+</html>
