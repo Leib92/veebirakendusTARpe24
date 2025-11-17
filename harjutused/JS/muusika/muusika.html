@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="muusikaScript.js"></script>
+</head>
+<body>
+<form action="">
+    <fieldset>
+        <legend>Milliseid muusikuid/ansambleid sa tead?</legend>
+        <input type="checkbox" name="ansambel" id="abba" value="ABBA" onchange="valiAnsambel()">
+        <label for="abba">ABBA</label>
+        <br>
+        <input type="checkbox" name="ansambel" id="the" value="The Beatles" onchange="valiAnsambel()">
+        <label for="the">The Beatles</label>
+        <br>
+        <input type="checkbox" name="ansambel" id="system" value="System of Down" onchange="valiAnsambel()">
+        <label for="system">System of Down</label>
+        <br>
+        <div id="vastus1"></div>
+    </fieldset>
+    <br>
+    <br>
+
+    <label for="arvamus">Mida arvad muusika kuulamisest koolis?</label>
+    <textarea name="" id="arvamus" cols="30" rows="5" onchange="arvamus()">
+    </textarea>
+    <div id="vastus2"></div>
+    <br>
+    <br>
+
+    <label for="kuulad">Sa kuulad muusikat [x] tundi päevas.</label>
+    <input type="radio" name="kuulad" id="kuulad1" value="1"><br>
+    <input type="radio" name="kuulad" id="kuulad2" value="2"><br>
+    <input type="radio" name="kuulad" id="kuulad3" value="3"><br>
+    <input type="radio" name="kuulad" id="kuulad4" value="4+"><br>
+    <br>
+
+
+    <label for="raadio">Raadio kuulamine: [jah/ei]</label>
+    <input type="text" name="" id="raadio" value="">
+    <br>
+    <br>
+
+    <label for="jaamad">Sinu nimetatud jaamad: [loetelu]</label>
+    <input type="radio" name="" id="jaamad" value="">
+    <br>
+    <br>
+
+    <label for="stiil">Sinu vastus: [valitud stiil]</label>
+    <input type="text" name="" id="stiil" value="">
+</form>
+</body>
+</html>

@@ -1,0 +1,29 @@
+fieldset{
+    width: 400px;
+    border-radius: 10px;
+}
+legend, label{
+    font-family: Times New Roman, Times New Roman, serif
+}
+input[type=text], input[type=number]{
+    padding: 1%;
+    border-radius: 10px;
+}
+input[type=reset], input[type=button]{
+    width: 100px;
+    padding: 1%;
+    border-radius: 10px;
+    border-bottom: 1px solid red;
+    border-left: 1px solid red;
+}
+
+button img{
+    height: 50px;
+}
+
+input[type=radio]+label:hover{
+    font-size: 20px;
+    background-color: lightgray;
+    border-radius: 10px;
+    padding: 1%;
+}

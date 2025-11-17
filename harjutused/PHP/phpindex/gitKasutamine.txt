@@ -1,0 +1,14 @@
+git init - uus repo
+git config --global user.name "Allan Leibenau"
+git config --global user.email "your_email@example.com"
+git config --global --list
+
+ssh-keygen -o -t rsa -C "your_email@example.com"
+
+git add .
+git commit -a -m "on loodud phpIndex"
+git remote remove origin
+
+git remote add origin git@github.com:Leib92/phpIndex
+git branch -M main
+git push -u origin main

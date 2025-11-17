@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+  <meta charset="UTF-8">
+  <title>ÜL2: Pildikaart</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Pildikaart - Kodu</h1>
+<img src="houseDeluxe.png" alt="HouseDeluxe Img" usemap="#houseDeluxeMap">
+<map name="houseDeluxeMap">
+  <!-- aken - ring coords (x, y, R) -->
+  <area shape="circle" coords="140,120,20" href="aken.html" alt="ring">
+  <!-- sein - rect coords (x1, y1, x2, y2) -->
+  <area shape="rect" coords="92,96,186,192" href="sein.html" alt="sein">
+  <!-- polügoon - poly coords (kõik koordinaadid vasakult paremale) -->
+  <area shape="poly" coords="86,94,195,95,140,45" href="katus.html" alt="katus">
+  <!-- koer - rect coords (x1, y1, x2, y2) -->
+  <area shape="rect" coords="18,146,68,178" href="koer.html" alt="koer">
+  <!-- puu - rect coords (x1, y1, x2, y2) -->
+  <area shape="rect" coords="6,3,74,104" href="puu.html" alt="puu">
+  <!-- rohi - rect coords (x1, y1, x2, y2) -->
+  <area shape="rect" coords="0,230,256,256" href="rohi.html" alt="rohi">
+</map>
+<div id="ala">
+  Siia tuleb vastav info!
+</div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+fieldset{
+    width: 200px;
+    border-radius: 10px;
+}
+legend, label{
+    font-weight: bold;
+    font-family: comic Sans MS, cursive;
+}
+input[type=text], input[type=number]{
+    padding: 1%;
+    border-radius: 10px;
+    border-bottom: 1px solid red;
+    border-left: 1px solid red;
+}
+input[type=reset], input[type=button]{
+    width: 100px;
+    padding: 1%;
+    border-radius: 10px;
+    border-bottom: 1px solid red;
+    border-left: 1px solid red;
+}
+
+button img{
+    height: 50px;
+}
+
+input[type=radio]+label:hover{
+    font-size: 20px;
+    background-color: lightgray;
+    border-radius: 10px;
+    padding: 1%;
+}
