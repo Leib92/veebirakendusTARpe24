@@ -13,6 +13,9 @@
             <a href="?leht=ajafunktsioonid.php">Ajafunktsioonid</a>
         </li>
         <li>
+            <a href="?leht=tekstifunktsioonid.php">Tekstifunktsioonid</a>
+        </li>
+        <li>
             <a href="allanleibenau23.thkit.ee" target="_blank">Vana index</a>
         </li>
         <li>
