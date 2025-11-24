@@ -1,4 +1,12 @@
 <?php
+function clearVarsExcept($url, $varname){
+    $url=basename($url);
+    if(str_starts_with($url, "?")){
+        return "?$varname=".$_REQUEST[$varname];
+    }
+    return strtok($url, "?")."?$varname=".$_REQUEST[$varname];
+}
+
 echo "<h2>Tekstifunktsioonid</h2>";
 echo '<br><br>';
 
@@ -57,7 +65,7 @@ echo "</ol>";
 echo '<br><br>';
 ?>
 
-<form action="tekstifunktsioonid.php" method="post">
+<form action="<?=clearVarsExcept($_SERVER['REQUEST_URI'], "leht")?>" method="post">
     <label for="linn">Sisesta linna nimi</label>
     <input type="text" id="linn" name="linn">
     <input type="submit" value="Kontrolli">
