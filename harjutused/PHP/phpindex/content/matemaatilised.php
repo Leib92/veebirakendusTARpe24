@@ -1,4 +1,14 @@
 <?php
+function clearVarsExcept($url, $varname){
+    $url=basename($url);
+    if(str_starts_with($url, "?")){
+        return "?$varname=".$_REQUEST[$varname];
+    }
+    return strtok($url, "?")."?$varname=".$_REQUEST[$varname];
+}
+?>
+
+<?php
 //aritmeetilised operaatorid
 $x = 8;
 $y = 2;
@@ -94,12 +104,55 @@ echo "Ruutjuur (9): ".sqrt(9);
 echo "<br>";
 echo "pi: ".pi();
 
-
 echo "<br><br>";
+
 
 echo "<strong>Trigonomeetria</strong>";
 echo "<br>";
 echo "Cosine (0.8): ".cos(0.8);
 echo "<br>";
 echo "Degree to Radius (30); ".deg2rad(30);
+
+echo "<br><br>";
+
+
+echo "<strong>Arvmõistatus. Arva ära kaks arvu vahemikus 0...10</strong>";
+echo "<br>";
+$arv1=4;
+$arv2=3;
+// kirjuta matemaatilise tehtega või funktisooni abil 5 vihjet
+$valem1 = $arv1 + $arv2;
+$valem2 = $arv1 - $arv2;
+$valem3 = $arv1 * $arv2;
+$valem4 = $arv1 / $arv2;
+echo "<ol>";
+echo "<li>Arvutates kaks arvu on ".$valem1."</li>";
+echo "<li>Lahutates kaks arvu on ".$valem2."</li>";
+echo "<li>Korrutades kaks arvu on ".$valem3."</li>";
+echo "<li>Jagades kaks arvu on ".round($valem4, 1)."</li>";
+echo "<li>Esimene arv saab jagada 2-ga täisarvuna, aga teist mitte.</li>";
+echo "</ol>";
+echo "<br>";
+?>
+<form action="<?=clearVarsExcept($_SERVER['REQUEST_URI'], "leht")?>" method="post">
+    <label for="arv1">Arv1:</label>
+    <input type="number" id="arv1" name="arv1" min="0" max="10" step="1">
+    <br>
+    <label for="arv2">Arv2:</label>
+    <input type="number" id="arv2" name="arv2" min="0" max="10" step="1">
+    <input type="submit" value="Kontrolli">
+</form>
+
+<?php
+if (isset($_REQUEST['arv1'])) {
+    if($_REQUEST['arv1'] != $arv1) {
+        echo $_REQUEST['arv1']." on vale";
+    }
+    else if($_REQUEST['arv2'] != $arv2){
+        echo $_REQUEST['arv2']." on vale";
+    }
+    else{
+        echo $_REQUEST['arv1']." ja ".$_REQUEST['arv2']." on õige.";
+    }
+}
 ?>
