@@ -81,7 +81,7 @@ function ristkylik(){
     }
 }
 
-// pilt
+// pildid
 function pilt(){
     const tahvel=document.getElementById("tahvel");
     if(tahvel.getContext){

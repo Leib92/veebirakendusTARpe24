@@ -28,7 +28,7 @@ function varvValik(){
 function radioValik() {
     let naerata = document.getElementById("naerata");
     let kurvasta = document.getElementById("kurvasta");
-    let pilt = document.getElementById("pilt");
+    let pilt = document.getElementById("pildid");
 
     if (naerata.checked) {
         pilt.src = "images/smile.png"

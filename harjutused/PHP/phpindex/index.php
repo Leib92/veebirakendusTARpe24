@@ -34,7 +34,7 @@ include("nav.php");
         Skriptikeel - skript teeb oma tööd pärast seda, kui toimus mingi sündmus.
     </div>
     <div>
-        <img src="pilt/phpPilt.png" alt="PHP pilt">
+        <img src="pildid/phpPilt.png" alt="PHP pilt">
     </div>
 </div>
 <br>

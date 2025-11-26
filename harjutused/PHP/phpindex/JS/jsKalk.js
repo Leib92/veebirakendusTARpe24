@@ -1,8 +1,8 @@
 function juhuslikPilt() {
     const pildid=[
-        'pilt/mtndew.jpg',
-        'pilt/pepsi.jpg',
-        'pilt/rootbeer.jpg'
+        'pildid/mtndew.jpg',
+        'pildid/pepsi.jpg',
+        'pildid/rootbeer.jpg'
 
     ];
     const randomPilt=document.getElementById('randomPilt');
