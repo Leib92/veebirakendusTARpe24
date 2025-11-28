@@ -32,6 +32,9 @@
             <a href="?leht=piltKataloog.php">Pilti Kataloog</a>
         </li>
         <li>
+            <a href="/content/mobiilimall/blanket.php" target="_blank">Blanket</a>
+        </li>
+        <li>
             <a href="?allanleibenau23.thkit.ee" target="_blank">Vana index</a>
         </li>
         <li>
