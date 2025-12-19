@@ -1,0 +1,11 @@
+canvas#tahvel{
+    background-color: lightblue;
+    border: 1px solid black;
+}
+canvas#lipp{
+    border: 1px solid gray;
+}
+canvas#valgus{
+    background-color: grey;
+    border: 3px solid black;
+}
